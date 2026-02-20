@@ -1,0 +1,86 @@
+<div class="home">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Premium Spirits</h1>
+      <p class="hero-subtitle">Experience the World's Finest Liquors</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" routerLink="/about">Discover More</button>
+        <button class="btn-secondary" routerLink="/contact">Contact Us</button>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="featured-section">
+    <div class="container">
+      <h2 class="section-title">Our Premium Collection</h2>
+      
+      <div class="collection-layout">
+        <!-- Featured Product -->
+        <div class="featured-product">
+          <div class="featured-image">
+            <div class="featured-badge">Editor's Choice</div>
+          </div>
+          <div class="featured-info">
+            <h3>{{ products[0].name }}</h3>
+            <p class="product-origin">{{ products[0].origin }}</p>
+            <p class="product-description">{{ products[0].description }}</p>
+            <div class="product-footer">
+              <span class="product-price">{{ products[0].price }}</span>
+              <button class="btn-view">View Details</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Smaller Grid -->
+        <div class="products-grid">
+          <div class="product-card" *ngFor="let product of products.slice(1)">
+            <div class="product-image">
+              <div class="product-badge">Premium</div>
+            </div>
+            <div class="product-info">
+              <h3>{{ product.name }}</h3>
+              <p class="product-origin">{{ product.origin }}</p>
+              <p class="product-description">{{ product.description }}</p>
+              <div class="product-footer">
+                <span class="product-price">{{ product.price }}</span>
+                <button class="btn-view">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-us-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      
+      <div class="features-grid">
+        <div class="feature-card" *ngFor="let feature of features">
+          <div class="feature-icon">{{ feature.icon }}</div>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Explore Our Collection?</h2>
+        <p>Visit us or get in touch to learn more about our premium spirits</p>
+        <button class="btn-primary" routerLink="/contact">Get Started</button>
+      </div>
+    </div>
+  </section>
+</div>
